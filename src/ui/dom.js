@@ -12,13 +12,13 @@ export function h(tag, props = {}, ...children) {
 }
 
 // Ô nhập kèm chỗ hiện lỗi ngay bên dưới
-export function field({ label, name, type = 'text', autocomplete }) {
+export function field({ label, name, type = 'text', autocomplete, inputmode }) {
   const id = `f-${name}`;
   return h(
     'div',
     { class: 'field' },
     h('label', { for: id }, label),
-    h('input', { id, name, type, autocomplete, 'aria-describedby': `${id}-error` }),
+    h('input', { id, name, type, autocomplete, inputmode, 'aria-describedby': `${id}-error` }),
     h('p', { id: `${id}-error`, class: 'field-error' }),
   );
 }
