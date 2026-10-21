@@ -9,7 +9,12 @@ export function renderLibrarianHome({ profile }) {
     children: [
       h('h1', {}, `Xin chào, ${profile.ho_ten}`),
       h('p', { class: 'muted' }, 'Bạn đang đăng nhập với vai trò thủ thư.'),
-      h('nav', { class: 'menu' }, h('a', { class: 'btn btn-primary', href: '#/quan-tri/sach' }, 'Quản lý sách')),
+      h(
+        'nav',
+        { class: 'menu' },
+        h('a', { class: 'btn btn-primary', href: '#/quan-tri/sach' }, 'Quản lý sách'),
+        h('a', { class: 'btn btn-primary', href: '#/quan-tri/doc-gia' }, 'Quản lý độc giả'),
+      ),
     ],
   });
 }
