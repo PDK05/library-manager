@@ -109,4 +109,4 @@ Không có kết quả → "Không tìm thấy sách phù hợp".
 | 4   | Mượn sách              | F4 | F2, F3     | [x] Xong |
 | 5   | Trả sách               | F5 | F4         | [x] Xong |
 | 6   | Quá hạn & tiền phạt    | F6 | F5         | [x] Xong |
-| 7   | Trang độc giả          | F7 | F2, F4, F6 | [ ] Chưa làm |
+| 7   | Trang độc giả          | F7 | F2, F4, F6 | [x] Xong |
