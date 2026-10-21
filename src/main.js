@@ -3,6 +3,7 @@ import { MESSAGES } from './auth/errors.js';
 import { HOME, ROLE, loadRole } from './auth/role.js';
 import { SessionExpiredError, signOut, watchAuth, withSession } from './auth/session.js';
 import { supabase } from './lib/supabase.js';
+import { renderBooks } from './pages/books.js';
 import { renderLibrarianHome } from './pages/librarian-home.js';
 import { renderLogin } from './pages/login.js';
 import { renderReaderHome } from './pages/reader-home.js';
@@ -16,6 +17,7 @@ const routes = {
   '/dang-nhap': { access: GUEST, render: renderLogin },
   '/dang-ky': { access: GUEST, render: renderSignup },
   '/quan-tri': { access: ROLE.librarian, render: renderLibrarianHome },
+  '/quan-tri/sach': { access: ROLE.librarian, render: renderBooks },
   '/doc-gia': { access: ROLE.reader, render: renderReaderHome },
 };
 

@@ -222,3 +222,174 @@ a {
     justify-content: space-between;
   }
 }
+
+/* Quản lý sách */
+.card-wide {
+  max-width: none;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 1.125rem;
+  margin: 0 0 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0 16px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.menu .btn {
+  text-decoration: none;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.search-input:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.data-table th {
+  background: var(--bg);
+  white-space: nowrap;
+}
+
+.data-table .num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.row-actions {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.row-actions .btn + .btn {
+  margin-left: 6px;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+.btn-danger {
+  background: var(--surface);
+  color: var(--error);
+  border-color: var(--error);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--error-bg);
+}
+
+.empty-message {
+  padding: 16px 0;
+}
+
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Điện thoại: mỗi sách là một thẻ, nhãn cột lấy từ data-label */
+@media (max-width: 640px) {
+  .data-table thead {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .data-table,
+  .data-table tbody,
+  .data-table tr,
+  .data-table td {
+    display: block;
+    border: 0;
+  }
+
+  .data-table tr {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    padding: 8px 12px;
+  }
+
+  .data-table td {
+    padding: 4px 0;
+    text-align: left;
+  }
+
+  .data-table td[data-label]::before {
+    content: attr(data-label) ': ';
+    font-weight: 600;
+  }
+
+  .data-table .num,
+  .row-actions {
+    text-align: left;
+  }
+
+  .row-actions {
+    padding-top: 8px;
+  }
+}
+
+/* display của các lớp ở trên không được đè thuộc tính hidden */
+[hidden] {
+  display: none !important;
+}

@@ -60,7 +60,7 @@ flowchart TD
     In --> Q["Số lượng = trim"] --> Q1{Rỗng?}
     Q1 -- Có --> EQ1["'Vui lòng nhập số lượng'"]
     Q1 -- Không --> Q2{"Số nguyên?"}
-    Q2 -- "Không (2.5, abc, -1)" --> EQ2["'Số lượng phải là số nguyên'"]
+    Q2 -- "Không (2.5, abc)" --> EQ2["'Số lượng phải là số nguyên'"]
     Q2 -- Có --> Q3{"1 ≤ số lượng ≤ 1000?"}
     Q3 -- Không --> EQ3["'Số lượng từ 1 đến 1000'"]
     Q3 -- Có --> QOK[Số lượng hợp lệ]
