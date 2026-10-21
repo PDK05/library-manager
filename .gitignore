@@ -48,3 +48,6 @@ Thumbs.db
 # Misc
 *.tmp
 .cache/
+
+# Playwright MCP (snapshot, screenshot, log khi test e2e)
+.playwright-mcp/

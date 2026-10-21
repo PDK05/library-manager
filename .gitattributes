@@ -1,0 +1,24 @@
+# Chuẩn hoá xuống dòng: lưu LF trong repo và khi checkout,
+# bất kể core.autocrlf của từng máy.
+* text=auto eol=lf
+
+# Script Windows cần CRLF
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Lockfile sinh tự động: ẩn khỏi diff
+package-lock.json  -diff linguist-generated
+
+# File nhị phân
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.webp  binary
+*.pdf   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
