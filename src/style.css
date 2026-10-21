@@ -250,13 +250,16 @@ a {
 
 .form-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+  margin-top: 8px;
 }
 
 .menu {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 16px;
 }
 
 .menu .btn {
@@ -267,7 +270,7 @@ a {
   width: 100%;
   max-width: 480px;
   padding: 10px 12px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font: inherit;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -342,7 +345,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .visually-hidden {
@@ -444,7 +447,7 @@ a {
 
 .picker-list {
   display: grid;
-  gap: 6px;
+  gap: 8px;
 }
 
 .picker-item {
@@ -519,4 +522,41 @@ a {
 .data-table .group-row th {
   text-align: left;
   background: #f3f4f6;
+}
+
+/* Trang độc giả */
+.data-table td.sold-out {
+  color: var(--error);
+  font-weight: 600;
+}
+
+.data-table td.status {
+  font-weight: 600;
+}
+
+.data-table td.status-overdue {
+  color: var(--error);
+}
+
+.data-table td.status-today,
+.data-table td.status-soon {
+  color: var(--warning);
+}
+
+.data-table tr.loan-overdue td {
+  background: var(--error-bg);
+}
+
+.data-table tr.loan-today td,
+.data-table tr.loan-soon td {
+  background: var(--warning-bg);
+}
+
+.unpaid-total {
+  margin: 12px 0;
+  font-weight: 600;
+}
+
+.unpaid-total.has-debt {
+  color: var(--error);
 }
