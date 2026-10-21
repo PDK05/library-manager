@@ -25,6 +25,7 @@ describe('signupErrorMessage', () => {
     [{ code: 'user_already_exists', status: 422 }, MESSAGES.alreadyRegistered],
     [{ code: 'email_exists', status: 422 }, MESSAGES.alreadyRegistered],
     [{ code: 'weak_password', status: 422 }, MESSAGES.weakPassword],
+    [{ code: 'email_address_invalid', status: 400 }, MESSAGES.emailRejected],
     [{ code: 'over_email_send_rate_limit', status: 429 }, MESSAGES.rateLimited],
     [{ code: 'unexpected_failure', status: 500 }, MESSAGES.notRegistered],
     // Dạng lỗi thật khi trigger lien_ket_tai_khoan từ chối (đã kiểm tra với Supabase, không có code)

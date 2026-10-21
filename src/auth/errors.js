@@ -8,6 +8,7 @@ export const MESSAGES = {
   notRegistered: 'Email chưa được đăng ký tại thư viện. Vui lòng liên hệ thủ thư.',
   alreadyRegistered: 'Email này đã có tài khoản. Vui lòng đăng nhập.',
   weakPassword: 'Mật khẩu chưa đủ mạnh. Vui lòng chọn mật khẩu khác.',
+  emailRejected: 'Email này không nhận được thư. Vui lòng kiểm tra lại hoặc liên hệ thủ thư.',
   confirmEmailSent: 'Đăng ký thành công. Vui lòng mở email để xác nhận rồi đăng nhập.',
   sessionExpired: 'Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại. Dữ liệu chưa lưu trên form đã bị mất.',
   sessionEnded: 'Phiên đăng nhập đã kết thúc. Vui lòng đăng nhập lại.',
@@ -31,6 +32,8 @@ export function signupErrorMessage(error) {
     return MESSAGES.alreadyRegistered;
   }
   if (error.code === 'weak_password') return MESSAGES.weakPassword;
+  // Supabase Auth từ chối tên miền không gửi được thư (ví dụ .test, sai chính tả)
+  if (error.code === 'email_address_invalid') return MESSAGES.emailRejected;
   if (isRateLimited(error)) return MESSAGES.rateLimited;
   // Trigger lien_ket_tai_khoan huỷ việc tạo user khi email không có hồ sơ;
   // Supabase Auth trả về lỗi chung "Database error saving new user".
