@@ -103,7 +103,7 @@ Không có kết quả → "Không tìm thấy sách phù hợp".
 ## 4. Danh sách chức năng & trạng thái
 | STT | Chức năng              | Mã | Phụ thuộc  | Trạng thái   |
 |-----|------------------------|----|------------|--------------|
-| 1   | Đăng nhập & phân quyền | F1 | –          | [ ] Chưa làm |
+| 1   | Đăng nhập & phân quyền | F1 | –          | [x] Xong |
 | 2   | Quản lý sách           | F2 | F1         | [ ] Chưa làm |
 | 3   | Quản lý độc giả        | F3 | F1         | [ ] Chưa làm |
 | 4   | Mượn sách              | F4 | F2, F3     | [ ] Chưa làm |
