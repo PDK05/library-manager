@@ -6,6 +6,7 @@ import { supabase } from './lib/supabase.js';
 import { renderBooks } from './pages/books.js';
 import { renderLibrarianHome } from './pages/librarian-home.js';
 import { renderLoan } from './pages/loan.js';
+import { renderReturn } from './pages/return.js';
 import { renderLogin } from './pages/login.js';
 import { renderReaders } from './pages/readers.js';
 import { renderReaderHome } from './pages/reader-home.js';
@@ -22,6 +23,7 @@ const routes = {
   '/quan-tri/sach': { access: ROLE.librarian, render: renderBooks },
   '/quan-tri/doc-gia': { access: ROLE.librarian, render: renderReaders },
   '/quan-tri/muon-sach': { access: ROLE.librarian, render: renderLoan },
+  '/quan-tri/tra-sach': { access: ROLE.librarian, render: renderReturn },
   '/doc-gia': { access: ROLE.reader, render: renderReaderHome },
 };
 
