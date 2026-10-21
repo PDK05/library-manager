@@ -5,6 +5,7 @@ import { SessionExpiredError, signOut, watchAuth, withSession } from './auth/ses
 import { supabase } from './lib/supabase.js';
 import { renderBooks } from './pages/books.js';
 import { renderLibrarianHome } from './pages/librarian-home.js';
+import { renderLoan } from './pages/loan.js';
 import { renderLogin } from './pages/login.js';
 import { renderReaders } from './pages/readers.js';
 import { renderReaderHome } from './pages/reader-home.js';
@@ -20,6 +21,7 @@ const routes = {
   '/quan-tri': { access: ROLE.librarian, render: renderLibrarianHome },
   '/quan-tri/sach': { access: ROLE.librarian, render: renderBooks },
   '/quan-tri/doc-gia': { access: ROLE.librarian, render: renderReaders },
+  '/quan-tri/muon-sach': { access: ROLE.librarian, render: renderLoan },
   '/doc-gia': { access: ROLE.reader, render: renderReaderHome },
 };
 

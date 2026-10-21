@@ -14,6 +14,7 @@ export function renderLibrarianHome({ profile }) {
         { class: 'menu' },
         h('a', { class: 'btn btn-primary', href: '#/quan-tri/sach' }, 'Quản lý sách'),
         h('a', { class: 'btn btn-primary', href: '#/quan-tri/doc-gia' }, 'Quản lý độc giả'),
+        h('a', { class: 'btn btn-primary', href: '#/quan-tri/muon-sach' }, 'Lập phiếu mượn'),
       ),
     ],
   });

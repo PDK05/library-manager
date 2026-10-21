@@ -421,6 +421,91 @@ a {
   color: var(--warning);
 }
 
+/* Lập phiếu mượn */
+.card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.card-head .card-title {
+  margin: 0;
+}
+
+.picker-list,
+.loan-list,
+.reason-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.picker-list {
+  display: grid;
+  gap: 6px;
+}
+
+.picker-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  text-align: left;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.picker-item:hover {
+  border-color: var(--primary);
+}
+
+.picker-title {
+  font-weight: 600;
+}
+
+.picker-note {
+  margin-left: auto;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--warning);
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 0 0 12px;
+}
+
+.summary-grid dt {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.summary-grid dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.loan-list {
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.reason-list {
+  margin-top: 6px;
+  padding-left: 18px;
+  list-style: disc;
+}
+
 /* display của các lớp ở trên không được đè thuộc tính hidden */
 [hidden] {
   display: none !important;
