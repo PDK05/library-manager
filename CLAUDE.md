@@ -49,9 +49,14 @@ These live in `PRD.md` (business parameters in §1.4) and `design/flows/` — ke
 
 ## Project structure
 
-- `PRD.md` — product requirements and feature status table
+- `PRD.md` — product requirements and feature status table (F1–F7 all done)
 - `design/flows/` — business flows (Mermaid) with edge cases; `README.md` indexes them
 - `design/ERD.md` — Mermaid ERD, DB constraints, views, RPCs and RLS matrix
+- `src/` — app code, one folder per feature with pure logic and Vitest tests next to it: `auth/`, `books/`, `readers/`, `loans/`, `returns/`, `fines/`, `portal/` (reader pages); plus `lib/` (Supabase client, shared helpers), `ui/` (DOM helpers, layout), `pages/` (screens), `router.js`, `main.js`, `style.css`
 - `supabase/migrations/` — SQL already applied to Supabase project `library-manager` (ref `nucyieutqjswplhukryd`, ap-southeast-1); add new migrations here and apply them with the Supabase MCP
+- `supabase/seed/` — test-account seed SQL (`tai_khoan_test.sql`)
 - `archive/gpa-tracker/` — superseded GPA tracker spec and flows, reference only
+- `common_errors.md` — mistakes and fixes by category; read before touching a related area
 - `.claude/commands/` — project slash commands
+- `.mcp.json` — Supabase, Playwright and Vercel MCP servers
+- Deployment: production at https://library-manager-iota-one.vercel.app (Vercel project `library-manager`, linked to GitHub `PDK05/library-manager`; pushing `main` auto-deploys; `.vercel/` is gitignored). Never print `.env.local` — it holds `VERCEL_OIDC_TOKEN`.
