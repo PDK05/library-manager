@@ -510,3 +510,8 @@ a {
 [hidden] {
   display: none !important;
 }
+
+.data-table td.overdue {
+  color: var(--error);
+  font-weight: 600;
+}
