@@ -63,7 +63,8 @@ a {
   margin-bottom: 4px;
 }
 
-.field input {
+.field input,
+.field select {
   width: 100%;
   padding: 10px 12px;
   font: inherit;
@@ -73,13 +74,20 @@ a {
   color: var(--text);
 }
 
-.field input:focus {
+.field input:focus,
+.field select:focus {
   outline: 2px solid var(--primary);
   outline-offset: 1px;
 }
 
-.field input[aria-invalid='true'] {
+.field input[aria-invalid='true'],
+.field select[aria-invalid='true'] {
   border-color: var(--error);
+}
+
+.field input[readonly] {
+  background: var(--bg);
+  color: var(--muted);
 }
 
 .field-error {
@@ -387,6 +395,30 @@ a {
   .row-actions {
     padding-top: 8px;
   }
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-hoat_dong {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.badge-bi_khoa {
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+.badge-het_han {
+  background: var(--warning-bg);
+  color: var(--warning);
 }
 
 /* display của các lớp ở trên không được đè thuộc tính hidden */

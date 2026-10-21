@@ -23,9 +23,21 @@ export function field({ label, name, type = 'text', autocomplete, inputmode }) {
   );
 }
 
+// Ô chọn (select) kèm chỗ hiện lỗi, cùng dạng với field(); options: [{ value, label }]
+export function selectField({ label, name, options }) {
+  const id = `f-${name}`;
+  return h(
+    'div',
+    { class: 'field' },
+    h('label', { for: id }, label),
+    h('select', { id, name, 'aria-describedby': `${id}-error` }, ...options.map((o) => h('option', { value: o.value }, o.label))),
+    h('p', { id: `${id}-error`, class: 'field-error' }),
+  );
+}
+
 export function showFieldErrors(form, errors) {
   let firstInvalid = null;
-  for (const input of form.querySelectorAll('input[name]')) {
+  for (const input of form.querySelectorAll('input[name], select[name]')) {
     const message = errors[input.name] ?? '';
     form.querySelector(`#f-${input.name}-error`).textContent = message;
     input.setAttribute('aria-invalid', message ? 'true' : 'false');

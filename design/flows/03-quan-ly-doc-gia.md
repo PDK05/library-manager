@@ -83,6 +83,7 @@ Không có kết quả → "Không tìm thấy độc giả phù hợp"; chưa c
 | SĐT `090 123 4567` / `+84901234567` | Hợp lệ (bỏ khoảng trắng) / lỗi (PRD yêu cầu bắt đầu bằng 0). |
 | Đổi email khi độc giả đã có tài khoản | Ô email bị khoá; CSDL cũng từ chối để email hồ sơ luôn khớp tài khoản. |
 | Khoá thẻ độc giả đang mượn sách | Cho phép; độc giả không mượn thêm được, vẫn trả sách bình thường. |
+| Sửa họ tên / khoá thẻ của độc giả đã hết hạn, giữ nguyên ngày hết hạn | Cho phép: chỉ bắt ngày hết hạn "từ hôm nay trở đi" khi ngày này thay đổi (đúng với trigger `tg_doc_gia_kiem_tra`); nếu không, thẻ hết hạn sẽ không sửa được gì trừ khi gia hạn. |
 | Gia hạn thẻ đã hết hạn | Sửa ngày hết hạn sang ngày ≥ hôm nay → trạng thái hiển thị về Hoạt động. |
 | Hai thủ thư cùng thêm độc giả | Mã thẻ sinh từ sequence trong CSDL nên không trùng. |
 | Xoá độc giả có phạt đã thanh toán, không còn sách mượn | Cho phép; lịch sử vẫn giữ. |
