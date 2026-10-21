@@ -51,3 +51,6 @@ Thumbs.db
 
 # Playwright MCP (snapshot, screenshot, log khi test e2e)
 .playwright-mcp/
+
+# Vercel CLI
+.vercel
