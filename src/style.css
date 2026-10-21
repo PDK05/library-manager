@@ -250,13 +250,16 @@ a {
 
 .form-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+  margin-top: 8px;
 }
 
 .menu {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 16px;
 }
 
 .menu .btn {
@@ -267,7 +270,7 @@ a {
   width: 100%;
   max-width: 480px;
   padding: 10px 12px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   font: inherit;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -342,7 +345,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .visually-hidden {
@@ -444,7 +447,7 @@ a {
 
 .picker-list {
   display: grid;
-  gap: 6px;
+  gap: 8px;
 }
 
 .picker-item {
