@@ -515,3 +515,8 @@ a {
   color: var(--error);
   font-weight: 600;
 }
+
+.data-table .group-row th {
+  text-align: left;
+  background: #f3f4f6;
+}
